@@ -1088,9 +1088,6 @@ video {
 .mb-12 {
   margin-bottom: 3rem;
 }
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -1121,9 +1118,6 @@ video {
 .flex {
   display: flex;
 }
-.inline-flex {
-  display: inline-flex;
-}
 .table {
   display: table;
 }
@@ -1147,10 +1141,6 @@ video {
 }
 .w-48 {
   width: 12rem;
-}
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
 }
 .w-full {
   width: 100%;
@@ -1276,10 +1266,6 @@ video {
 }
 .border-dashed {
   border-style: dashed;
-}
-.border-pine-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(127 164 135 / var(--tw-border-opacity, 1));
 }
 .border-pine-500\/40 {
   border-color: rgb(47 93 66 / 0.4);

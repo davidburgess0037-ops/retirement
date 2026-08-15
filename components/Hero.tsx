@@ -6,9 +6,7 @@ export default function Hero() {
     <section id="top" className="relative overflow-hidden border-b border-rule">
       <div className="mx-auto grid max-w-content gap-10 px-6 py-16 md:grid-cols-[1.1fr_0.9fr] md:py-24">
         <div className="flex flex-col justify-center">
-          <span className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-pine-300 bg-sage px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-pine-700">
-            A sample built in Next.js
-          </span>
+        
           <h1 className="text-balance font-display text-4xl leading-[1.08] text-pine-900 sm:text-5xl md:text-[3.4rem]">
             The best retirement plan is the one that matches{" "}
             <em className="text-gold-700">how you earn</em>, not just how much you save.
