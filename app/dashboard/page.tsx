@@ -6,10 +6,9 @@ import { useRouter } from "next/navigation";
 import { getBankState, resetBankState, formatUSD } from "@/lib/bank";
 
 const quickActions = [
-  { emoji: "🧾", label: "Pay Bills" },
-  { emoji: "💳", label: "Virtual Card" },
-  { emoji: "🎁", label: "Rewards" },
-  { emoji: "📈", label: "Savings" },
+  { emoji: "🧾", label: "Pay bills", link: "/retirement" },
+  { emoji: "🎁", label: "Rewards" , link: "/retirement"},
+  { emoji: "📈", label: "Retirement Account" , link: "/retirement"},
 ];
 
 function money(n: number) {
@@ -281,20 +280,20 @@ export default function DashboardPage() {
             Quick Actions
           </h2>
 
-          <div className="mt-5 grid grid-cols-2 gap-4 md:grid-cols-4">
-            {quickActions.map((item) => (
-              <button
-                key={item.label}
-                className="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-rule transition hover:-translate-y-1 hover:ring-pine-300"
-              >
-                <div className="text-3xl">{item.emoji}</div>
-
-                <p className="mt-3 text-sm font-semibold text-pine-900">
-                  {item.label}
-                </p>
-              </button>
-            ))}
-          </div>
+         <div className="mt-5 grid grid-cols-2 gap-4 md:grid-cols-4">
+  {quickActions.map((item) => (
+    <Link
+      key={item.label}
+      href={item.link}
+      className="block rounded-2xl bg-white p-6 shadow-lg ring-1 ring-rule transition hover:-translate-y-1 hover:ring-pine-300"
+    >
+      <div className="text-3xl">{item.emoji}</div>
+      <div className="mt-3 text-sm font-semibold text-pine-900">
+        {item.label}
+      </div>
+    </Link>
+  ))}
+</div>
         </section>
       </main>
     </div>

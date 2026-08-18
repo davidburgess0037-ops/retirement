@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
@@ -38,6 +39,25 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addUtilities }) => {
+      addUtilities({
+        ".bg-mist": { backgroundColor: "#f0f2f0" },
+        ".shadow-card": { boxShadow: "0 4px 12px rgba(0,0,0,0.05)" },
+        ".btn-primary": {
+          "@apply rounded-full bg-pine-500 px-6 py-3 font-semibold text-white transition hover:bg-pine-700 focus:outline-none focus:ring-2 focus:ring-pine-300": {},
+        },
+        ".btn-ghost": {
+          "@apply rounded-full border border-gray-300 px-6 py-3 font-semibold text-gray-700 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-200": {},
+        },
+        ".input": {
+          "@apply w-full rounded-xl border border-gray-200 px-4 py-3 text-sm focus:border-pine-500 focus:outline-none focus:ring-2 focus:ring-pine-100": {},
+        },
+        ".label": {
+          "@apply mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500": {},
+        },
+      });
+    }),
+  ],
 };
 export default config;
